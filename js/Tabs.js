@@ -17,8 +17,7 @@ class Tabs extends Component {
   };
 /*这里定义希望可以传数据到上一层*/
   static defaultProps = {
-    classPrefix: 'tabs',
-    onChange: () => {},
+      onChangeTable: () => {},
   };
 
   constructor(props) {
@@ -28,8 +27,8 @@ class Tabs extends Component {
 
     this.handleTabClick = this.handleTabClick.bind(this);
     let activeIndex;
-    if ('defaultActiveIndex' in currProps) {
-      activeIndex = currProps.defaultActiveIndex;
+    if ('activeIndex' in currProps) {
+      activeIndex = currProps.activeIndex;
     }
     this.state = {
       activeIndex,
@@ -37,13 +36,13 @@ class Tabs extends Component {
     };
   }
   /*检查收到的Prop和目前默认的p'rops是否发生改变*/
-  componentWillReceiveProps(nextProps) {
+ /* componentWillReceiveProps(nextProps) {
     if ('activeIndex' in nextProps) {
       this.setState({
         activeIndex: nextProps.activeIndex,
       });
     }
-  }
+  }*/
 
   handleTabClick(activeIndex) {
     const prevIndex = this.state.activeIndex;
@@ -53,7 +52,7 @@ class Tabs extends Component {
         activeIndex,
         prevIndex,
       });
-      this.props.onChange.bind(this, activeIndex);/*继续向上传递，当前和上一次的情况*/
+      this.props.onChangeTable(activeIndex);/*继续向上传递，当前和上一次的情况*/
     }
   }
 
@@ -75,7 +74,7 @@ class Tabs extends Component {
         const { className } = this.props;
         const cx = classnames(className,'result');
         return (
-            <div  className={cx}>
+            <div className={cx}>
                 {this.renderTabNav()}
             </div>
         );

@@ -1,22 +1,22 @@
 [
   {
-    "tab": "1",
+    "tabfont": "&#xe96e;",
     "title": "微信",
-    "desc": "Here he comes Here comes Speed Racer 1."
+    "desc": "Our chatting content in this part"
   },
   {
-    "tab": "2",
+    "tabfont": "&#xe972;",
     "title": "通讯录",
-    "desc": "Here he comes Here comes Speed Racer 2."
+    "desc": "Our friend list in this part"
   },
   {
-    "tab": "3",
+    "tabfont": "&#xe94a;",
     "title": "发现",
-    "desc": "Here he comes Here comes Speed Racer 3."
+    "desc": "Look at the circle of friends in this part "
   },
   {
-    "tab": "4",
+    "tabfont": "&#xe971;",
     "title": "我",
-    "desc": "Here he comes Here comes Speed Racer 3."
+    "desc": "Person setting"
   }
 ]

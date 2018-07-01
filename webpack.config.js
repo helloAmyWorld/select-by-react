@@ -31,7 +31,15 @@ module.exports = {
     {
        test:/\.json$/,
        loader:"json-loader"
-    }
+    },
+    {
+         test: /\.(png|jpg|svg)$/,
+        loader: 'url-loader?limit=8192'
+     },
+    {
+         test: /\.(mp4|ogg|woff|woff2|eot|ttf|svg)$/,
+         loader: 'file-loader'
+      }
     ],
     },
 

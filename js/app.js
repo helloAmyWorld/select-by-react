@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, cloneElement } from 'react';
+import React, { Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import Tabs from './Tabs';
 import TabResult from './TabResult';
@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="tabs-bar ui-tabs">
           <TabResult activeIndex={this.state.activeIndex} classPrefix='tabs' data={imageDatas}></TabResult>
-          <Tabs defaultActiveIndex={this.state.activeIndex} className="tabs-bar"  classPrefix='tabs' data={imageDatas} onChange={this.handleChange}></Tabs>
+          <Tabs activeIndex={this.state.activeIndex} className="tabs-bar"  classPrefix='tabs' data={imageDatas} onChangeTable={this.handleChange}></Tabs>
       </div>
     );
   }
